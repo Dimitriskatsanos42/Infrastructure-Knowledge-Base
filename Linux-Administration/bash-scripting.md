@@ -26,7 +26,7 @@
 # Script: example.sh
 # Περιγραφή: Τι κάνει αυτό το script
 # Author: Dimitris Katsanos
-# Date: 2025-06-20
+# Date: 2026-06-20
 # Usage: ./example.sh [argument]
 # ============================================
 
