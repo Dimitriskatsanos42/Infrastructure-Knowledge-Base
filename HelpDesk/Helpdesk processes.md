@@ -1,4 +1,335 @@
-```sh
+
+Gemini
+Νέα συνομιλία
+Αναζήτηση συνομιλιών
+Βιβλιοθήκη
+Νέο σημειωματάριο
+ITIL HelpDesk Processes Explained
+Αίτηση για Θέση IT System Analyst
+Βελτίωση Οδηγού systemd Services
+Ενίσχυση Repository: Cloud & Δίκτυα
+ετοιομαζε ενα redme.md με τα βσικΑ ΤΟΠΥ Cybersecurity ΓΙΑ ΝΑ ΑΝΑΒΕΑΣΩ
+netsh advfirewall show allprofiles Domain Profile Settings: ---------------------------------------------------------------------- State                                 ON Firewall Policy                       BlockInbound,AllowOutbound LocalFirewallRules                    N/A (GPO-store only) LocalConSecRules                      N/A (GPO-store only) InboundUserNotification               Enable RemoteManagement                      Disable UnicastResponseToMulticast            Enable Logging: LogAllowedConnections                 Disable LogDroppedConnections                 Disable FileName                              %systemroot%\system32\LogFiles\Firewall\pfirewall.log MaxFileSize                           4096 Private Profile Settings: ---------------------------------------------------------------------- State                                 ON Firewall Policy                       BlockInbound,AllowOutbound LocalFirewallRules                    N/A (GPO-store only) LocalConSecRules                      N/A (GPO-store only) InboundUserNotification               Enable RemoteManagement                      Disable UnicastResponseToMulticast            Enable Logging: LogAllowedConnections                 Disable LogDroppedConnections                 Disable FileName                              %systemroot%\system32\LogFiles\Firewall\pfirewall.log MaxFileSize                           4096 Public Profile Settings: ---------------------------------------------------------------------- State                                 ON Firewall Policy                       BlockInbound,AllowOutbound LocalFirewallRules                    N/A (GPO-store only) LocalConSecRules                      N/A (GPO-store only) InboundUserNotification               Enable RemoteManagement                      Disable UnicastResponseToMulticast            Enable Logging: LogAllowedConnections                 Disable LogDroppedConnections                 Disable FileName                              %systemroot%\system32\LogFiles\Firewall\pfirewall.log MaxFileSize                           4096 Ok. πρεπει αυτο to readme να το ενισχυσουεμ περισσοτερο με και αλλα πραγματα ή οχι
+SIEM Framework & Advanced Ideas
+Linux & DevOps Roadmap README
+Προτάσεις για Network Engineer Projects
+Repository Network Concepts Expansion
+Οδηγίες Εγκατάστασης και Εκτέλεσης Project
+AI Predictive Maintenance Project Enhancements
+Windows Εντολές Γραμμής Εντολών
+Δημιουργία GitHub Portfolio για IT
+Χρήσιμες Εντολές Δικτύου & Συστήματος
+αυτο ειναι το βιογραφικο μου.
+Απαντήσεις Τεστ Insider B2 Ενότητα 4
+This project is the first assignment for the Information Systems Security course at the University of Ioannina, Department of Informatics & Telecommunications. It implements a security utility tool focused on data integrity, entropy analysis, and two-factor authentication (2FA). Features The application is divided into three main functional parts: Part A: Hashing & Integrity Check Multi-Algorithm Support: Calculates hashes using MD5, SHA-1, SHA-256, and SHA-3 (Keccak). Binary Processing: Reads files in binary mode to support any file type (PDF, EXE, images, etc.). Integrity Verification: Saves the calculated hash to a .hash file and compares it later to detect if a file has been altered or modified. Part B: Shannon Entropy Analysis Randomness Measurement: Calculates the entropy of a file at the byte level (0-255). Data Characterization: Identifies if a file is likely encrypted (entropy values near 8) or simple text (lower entropy values). Mathematical Formula: Implements the Shannon Entropy formula: H=−∑p(xi)log2p(xi). Part C: Two-Factor Authentication (2FA) OTP Generation: Uses a secret key to generate a dynamic One-Time Password (OTP). Access Control: Protects critical operations, such as integrity checks, by requiring a valid 6-digit code before execution. μπορεις να μου λυσεις την εργασια
+Προγραμματισμός Δικτύων & GitHub Βιογραφικό
+Απαντήσεις Ασκήσεων Γραμματικής
+Αυτοκτονία, Στήριξη και Επικοινωνία
+Επιλογή τίτλου για κείμενο
+Αγοράζω ένα crypto wallet πως ξεκινάω να το χρησιμοποιώ για πρώτη φορά συν πως αγοράζω για πρώτη φορά να τα χρησιμοποιήσω
+Απαντήσεις και Επεξηγήσεις Γραμματικής
+Τεχνικός Cosmote: Νέες Επιλογές Καριέρας
+Δημιουργία MCP Server: Οδηγός & Ιδέες
+Δημιουργία AI Chatbot με Voiceflow
+AI Hotel Receptionist Code Implementation
+Ασκήσεις Χρόνων Ενεστώτα
+Ασκήσεις Λεξιλογίου: Σωστές Απαντήσεις
+Instagram Story για Πτυχίο Ξαδέρφης
+TP-Link Router: Δυνατότητες και Χρήσεις
+Δημιουργία AI Agent για Polymarket
+Θέλω να φτιάξω ένα bot που θα βγάζει λεφτά από το polymarket πες μου πως θα το κάνουμε
+AI, Παιδί, και η Νέα Εποχή
+Crypto to AI: GPU Renaissance
+Μετάφραση Ιστορικών Ασκήσεων και Ιδεών
+Δώσε μου τις σωστές απαντήσεις
+Ασκήσεις Παραγώγων: Σωστές Απαντήσεις
+Ελληνικές IP και Cloudflare προβλήματα
+Αδυναμία Παροχής Σωστών Απαντήσεων
+Cloud πωλήσεις σε τοπικές επιχειρήσεις
+Επιχειρηματικές Ιδέες Τεχνικού Πεδίου
+Σωστές Απαντήσεις σε Ασκήσεις Γραμματικής
+Μετάβαση σε Cloud/DevOps: Οδηγός Portfolio
+Δημιουργία AI Agent για Σημαντικά Προβλήματα
+Αποσαφήνιση Αινιγματικής Ενημέρωσης
+Σωστές Απαντήσεις Ασκήσεων Βιβλίου
+Story για εισιτήρια αγώνα
+Αλλαγή Ώρας Μαθήματος Δευτέρας
+Present Perfect: Simple vs Continuous
+Εξέλιξη Τεχνικού Πεδίου Cosmote
+Μετάφραση Ερωτήσεων Αίτησης Εργασίας
+Ερωτήσεις Αίτησης Εργασίας Intergo Telecom
+Ασκήσεις Present Perfect: Λύσεις & Εξηγήσεις
+React Native App Ideas for Beginners
+Μετάφραση αγγελίας για μηχανικό λογισμικού
+Μετά το Τριήμερο: Ιδέες για Story
+Γραμματική: Απαντήσεις Ασκήσεων
+Δέκα Προτάσεις και Σύνδεση Workspace
+Πρόσκληση για καφέ και επανένωση
+Θέλω να ανεβάσω ένα χιουμοριστικό στορυ αν σμρ που είναι του Αγίου Βαλεντίνου αν γιορτάζει. Πες μου ένα στορυ για ιδέα
+Θέλω να κάνω ένα στορυ ότι ένας φίλος μου που πήγε να κλείσει δεν βρήκε. Φτιάξτο να το ανεβάσω στορυ
+Ιδέες για Story Εργασιακής Κούρασης
+Ασκήσεις Present Simple & Continuous
+EuroLeague Final Four: Προπώληση Εισιτηρίων Visa
+Γρίφος Ζύγισης Μπάλας: Λύση & Στρατηγικές
+Βελτίωση Κώδικα QR Menu
+QR Code και NFC για μενού εστιατορίου
+Σύνορα, drones και ανθρώπινες τραγωδίες
+Μενού Εστιατορίου: Μοντέρνο Σχέδιο
+Αίτημα για εισιτήρια Final 4
+Δημιουργία Έκθεσης για Ποδόσφαιρο
+Πώληση Αυτοματισμών με Zapier
+Σύνδεση Stripe με Ιστοσελίδα
+Junior Devs, AI και το Μέλλον
+Δημιουργία Λειτουργικού E-shop με JS
+Απαντήσεις Ασκήσεων "Words Easily Confused"
+E-shop Implementation and Functionality
+Νέος developer ζητά πρώτη δουλειά
+LinkedIn Link Update Request
+Απαντήσεις Ασκήσεων Γραμματικής
+Ζητώντας Κώδικα Εφαρμογής Δρομέων
+Απαντήσεις και Εξηγήσεις Γραμματικής
+Δημιουργία Ιστιοσανίδας σε Κινητό
+Σχόλιο για προπονητή και ομάδα
+Κέρδη από Developer: Προϊόντα & Κώδικας
+Μήνυμα Υποστήριξης για Εκλογές Συλλόγου
+Ανάπτυξη Ψηφιακού Πορτοφολιού: Οδηγός
+Ανάπτυξη Ψηφιακού Πορτοφολιού: Οδηγός
+Ανάπτυξη Ψηφιακού Πορτοφολιού: Οδηγός
+Backend Projects for Junior Developers
+Δημιουργία MCP Server με Node.js
+CV/LinkedIn Summary Alternatives
+
+Δραστηριότητα
+Πρέβεζα, Ελλάδα
+Από τη διεύθυνση IP σας
+Ενημέρωση τοποθεσίας
+Συνομιλία με το Gemini
+# 🖥️ HelpDesk Processes — ITIL Framework & Operations
+
+
+
+> Πλήρης οδηγός διαδικασιών IT Support — από τη θεωρία ITIL μέχρι την καθημερινή πράξη του HelpDesk.
+
+
+
+---
+
+
+
+## 🗺️ Πίνακας Περιεχομένων
+
+
+
+1. [Τι είναι το ITIL;](#-1-τι-είναι-το-itil)
+
+2. [Incident Management](#-2-incident-management)
+
+3. [Problem Management](#-3-problem-management)
+
+4. [Change Management](#-4-change-management)
+
+5. [SLA / SLO / SLI](#-5-sla--slo--sli)
+
+6. [Escalation Tiers](#-6-escalation-tiers)
+
+7. [Κύκλος Ζωής Ticket](#-7-κύκλος-ζωής-ticket)
+
+8. [Επικοινωνία με Χρήστες](#-8-επικοινωνία-με-χρήστες)
+
+
+
+---
+
+
+
+## 📖 1. Τι είναι το ITIL;
+
+
+
+Το **ITIL (Information Technology Infrastructure Library)** είναι ένα σύνολο βέλτιστων πρακτικών για τη διαχείριση IT υπηρεσιών. Δεν είναι εργαλείο ή λογισμικό — είναι **φιλοσοφία και μεθοδολογία**.
+
+
+
+> *"Η IT δεν υπάρχει για να διαχειρίζεται servers — υπάρχει για να εξυπηρετεί την επιχείρηση."*
+
+
+
+**Γιατί το χρησιμοποιούν οι εταιρείες:**
+
+- Κοινή γλώσσα μεταξύ IT και business
+
+- Μετρήσιμη ποιότητα υπηρεσιών μέσω SLA
+
+- Λιγότερα incidents μέσω proactive διαχείρισης
+
+- Τυποποιημένες διαδικασίες — λιγότερα λάθη
+
+
+
+**Βασικές Διεργασίες ITIL:**
+
+δωσε το readme καλυτερο γραμμενο
+
+Ορίστε μια πλήρως ανανεωμένη, επαγγελματική και αναλυτική έκδοση του README. Έχω διατηρήσει την αρχική δομή που πρότεινες, εμπλουτίζοντας όμως το περιεχόμενο με βέλτιστες πρακτικές, ξεκάθαρους ορισμούς και σωστή μορφοποίηση για εύκολη ανάγνωση.
+
+🖥️ HelpDesk Processes — ITIL Framework & Operations
+Πλήρης οδηγός διαδικασιών IT Support — από τη θεωρία του ITIL μέχρι την καθημερινή πράξη και διαχείριση ενός HelpDesk.
+
+🗺️ Πίνακας Περιεχομένων
+Τι είναι το ITIL;
+
+Incident Management
+
+Problem Management
+
+Change Management
+
+SLA / SLO / SLI
+
+Escalation Tiers
+
+Κύκλος Ζωής Ticket
+
+Επικοινωνία με Χρήστες
+
+📖 1. Τι είναι το ITIL;
+Το ITIL (Information Technology Infrastructure Library) είναι ένα κορυφαίο, παγκόσμιο σύνολο βέλτιστων πρακτικών για τη διαχείριση IT υπηρεσιών (ITSM). Δεν είναι λογισμικό ή συγκεκριμένο εργαλείο — είναι μια φιλοσοφία και μεθοδολογία που εστιάζει στην ευθυγράμμιση των IT υπηρεσιών με τις ανάγκες της επιχείρησης.
+
+"Το IT δεν υπάρχει απλά για να διαχειρίζεται servers και καλώδια — υπάρχει για να προσδίδει αξία και να εξυπηρετεί τους στόχους της επιχείρησης."
+
+Γιατί το χρησιμοποιούν οι εταιρείες:
+
+Δημιουργεί κοινή γλώσσα επικοινωνίας μεταξύ IT τμημάτων και business stakeholders.
+
+Προσφέρει μετρήσιμη ποιότητα υπηρεσιών μέσω συγκεκριμένων δεικτών.
+
+Μειώνει τον χρόνο αδράνειας (downtime) μέσω proactive διαχείρισης.
+
+Καθιερώνει τυποποιημένες διαδικασίες, ελαχιστοποιώντας τα ανθρώπινα λάθη.
+
+Βασικοί Πυλώνες (ITIL Lifecycle):
+
+Service Strategy: Ποια είναι η στρατηγική και τι υπηρεσίες προσφέρουμε.
+
+Service Design: Σχεδιασμός νέων ή αλλαγμένων υπηρεσιών.
+
+Service Transition: Ομαλή μετάβαση των αλλαγών στο παραγωγικό περιβάλλον.
+
+Service Operation: Η καθημερινή λειτουργία (εδώ ανήκει κυρίως το HelpDesk).
+
+Continual Service Improvement: Συνεχής βελτίωση των παρεχόμενων υπηρεσιών.
+
+🚨 2. Incident Management (Διαχείριση Περιστατικών)
+Ορισμός: Ένα Incident (Περιστατικό) είναι οποιαδήποτε μη προγραμματισμένη διακοπή ή υποβάθμιση της ποιότητας μιας IT υπηρεσίας.
+
+Παράδειγμα: "Ο εκτυπωτής στον 2ο όροφο δεν λειτουργεί" ή "Το σύστημα ERP έπεσε".
+
+Πρωταρχικός Στόχος:
+Η ταχύτερη δυνατή επαναφορά της κανονικής λειτουργίας της υπηρεσίας, ελαχιστοποιώντας τον αντίκτυπο στην επιχείρηση. Δεν ψάχνουμε απαραίτητα το "γιατί" χάλασε σε αυτή τη φάση, αλλά το "πώς θα δουλέψει τώρα" (συχνά μέσω κάποιου workaround).
+
+Βήματα Διαδικασίας:
+
+Αναγνώριση & Καταγραφή (Logging)
+
+Κατηγοριοποίηση & Ορισμός Προτεραιότητας (Categorization & Prioritization)
+
+Αρχική Διάγνωση (First-line diagnosis)
+
+Κλιμάκωση (Escalation) - αν απαιτείται
+
+Επίλυση και Ανάκαμψη (Resolution & Recovery)
+
+Κλείσιμο Ticket
+
+🔍 3. Problem Management (Διαχείριση Προβλημάτων)
+Ορισμός: Το Problem (Πρόβλημα) είναι η κρυφή ή βαθύτερη αιτία (root cause) ενός ή περισσοτέρων Incidents.
+
+Παράδειγμα: "Ο εκτυπωτής χαλάει κάθε μέρα στις 10:00 (Incidents). Το Problem είναι ότι υπάρχει ελαττωματικό firmware που κολλάει στο καθημερινό automated report."
+
+Πρωταρχικός Στόχος:
+Να εντοπίσει την αιτία, να αποτρέψει την επανεμφάνιση των περιστατικών (proactive) και να ελαχιστοποιήσει τον αντίκτυπο αυτών που δεν μπορούν να αποφευχθούν.
+
+Χαρακτηριστικό	Incident	Problem
+Εστίαση	Ταχύτητα (Επαναφορά τώρα)	Ανάλυση (Εύρεση Root Cause)
+Χρόνος	Βραχυπρόθεσμα	Μακροπρόθεσμα
+Αποτέλεσμα	Workaround (Προσωρινή Λύση)	Permanent Fix (Μόνιμη Λύση)
+⚙️ 4. Change Management (Διαχείριση Αλλαγών)
+Ορισμός: Η διαδικασία ελέγχου του κύκλου ζωής όλων των αλλαγών (προσθήκες, τροποποιήσεις ή αφαιρέσεις) που μπορεί να επηρεάσουν τις IT υπηρεσίες.
+
+Πρωταρχικός Στόχος:
+Η εφαρμογή αλλαγών με ελάχιστο ρίσκο και διακοπές (downtime).
+
+Τύποι Αλλαγών:
+
+Standard Change: Προ-εγκεκριμένες, χαμηλού ρίσκου αλλαγές (π.χ. δημιουργία νέου χρήστη, αλλαγή μπαταρίας UPS).
+
+Normal Change: Απαιτούν σχεδιασμό, αξιολόγηση και έγκριση από το CAB (Change Advisory Board) πριν την εφαρμογή (π.χ. αναβάθμιση κεντρικού server).
+
+Emergency Change: Αλλαγές που πρέπει να γίνουν άμεσα για την αποκατάσταση κρίσιμου περιστατικού (π.χ. εφαρμογή security patch για zero-day vulnerability).
+
+📊 5. SLA / SLO / SLI
+Για να μετρηθεί η απόδοση του HelpDesk, χρησιμοποιούμε 3 αλληλένδετους όρους που συχνά συγχέονται:
+
+Όρος	Τι σημαίνει;	Εξήγηση	Παράδειγμα
+SLA	Service Level Agreement	Η επίσημη συμφωνία (συμβόλαιο) με τον πελάτη/χρήστη. Αν παραβιαστεί, υπάρχουν συνέπειες (π.χ. επιστροφή χρημάτων, πέναλτι).	"Το σύστημα θα είναι online το 99.9% του χρόνου κάθε μήνα."
+SLO	Service Level Objective	Ο εσωτερικός στόχος της ομάδας IT, που πρέπει να είναι αυστηρότερος από το SLA για να υπάρχει περιθώριο ασφαλείας.	"Ο στόχος μας (SLO) είναι 99.95% uptime."
+SLI	Service Level Indicator	Η πραγματική μέτρηση απόδοσης (το νούμερο).	"Αυτό τον μήνα, το uptime ήταν 99.97%."
+🏢 6. Escalation Tiers (Επίπεδα Υποστήριξης)
+Η οργάνωση του IT Support δομείται συνήθως σε επίπεδα, ώστε να διαχειρίζεται αποτελεσματικά τον όγκο των αιτημάτων.
+
+Tier 1 (First-Line / HelpDesk): Η "πρώτη γραμμή". Υποδέχονται τα calls/tickets, κάνουν βασικό troubleshooting (passwords, basic app issues) και καταγράφουν σωστά το πρόβλημα. Εάν δεν μπορούν να το λύσουν άμεσα, το προωθούν.
+
+Tier 2 (Desktop / Technical Support): Πιο έμπειροι τεχνικοί. Διαχειρίζονται πιο σύνθετα προβλήματα που απαιτούν βαθύτερη γνώση του συστήματος (π.χ. network troubleshooting, complex software bugs).
+
+Tier 3 (Specialist / Engineering / DevOps): Οι "Gurus". Εδώ καταλήγουν προβλήματα αρχιτεκτονικής, servers, databases, ή bugs που απαιτούν αλλαγές στον κώδικα της εφαρμογής.
+
+Tier 4 (External Vendors): Υποστήριξη από τρίτους κατασκευαστές (π.χ. Microsoft, Cisco, ISP).
+
+🔄 7. Κύκλος Ζωής Ticket
+Κάθε αίτημα ακολουθεί μια συγκεκριμένη διαδρομή (Status) μέσα στο σύστημα (π.χ. Jira, ServiceNow, Zendesk):
+
+New / Open: Το ticket μόλις άνοιξε, δεν το έχει αναλάβει κανείς.
+
+Assigned: Το ticket ανατέθηκε σε τεχνικό ή ομάδα.
+
+In Progress: Ο τεχνικός εργάζεται ενεργά πάνω στο πρόβλημα.
+
+Pending / Waiting: Η διαδικασία έχει παγώσει. Μπορεί να είναι Waiting for User (ζητήθηκαν διευκρινίσεις) ή Waiting for Vendor (αναμονή από τρίτο προμηθευτή).
+
+Resolved: Δόθηκε λύση στο πρόβλημα, αλλά εκκρεμεί η επιβεβαίωση από τον χρήστη.
+
+Closed: Το ticket έχει κλείσει οριστικά (συνήθως αυτόματα μετά από x ημέρες από το Resolved).
+
+🗣️ 8. Επικοινωνία με Χρήστες
+Τα τεχνικά skills είναι μόνο το μισό ενός καλού HelpDesk. Το άλλο μισό είναι το Customer Service.
+
+Βέλτιστες Πρακτικές:
+
+Ενσυναίσθηση (Empathy): Αναγνώρισε την απογοήτευση του χρήστη. Ένα απλό "Καταλαβαίνω ότι αυτό σας καθυστερεί την εργασία, ας το λύσουμε άμεσα" κάνει θαύματα.
+
+Απόφυγε την ξύλινη IT γλώσσα (Jargon): Μην λες "Πρέπει να κάνω flush το DNS και release την IP γιατί υπάρχει conflict στον DHCP." Πες "Θα κάνω μια επανεκκίνηση στη σύνδεση του υπολογιστή σας με το δίκτυο."
+
+Συνεχείς Ενημερώσεις (Keep them in the loop): Αν ένα πρόβλημα θα πάρει μέρες, στείλε ένα μικρό update (π.χ. "Εργαζόμαστε ακόμα πάνω σε αυτό") ώστε ο χρήστης να μην νιώθει ότι τον ξέχασαν.
+
+Under-promise, Over-deliver: Μην υπόσχεσαι λύση σε 5 λεπτά αν δεν είσαι σίγουρος. Δώσε ρεαλιστικά timeframes.
+
+θελω να μυο το δωσεις σε μορφη Helpdesk processes.md
+
+Your Markdown file is ready
+Εικονίδιο MD
+Helpdesk processes
+ MD 
+Ανοικτό
+
+Το αρχείο Helpdesk processes.md δημιουργήθηκε με επιτυχία. Περιλαμβάνει όλο το εμπλουτισμένο περιεχόμενο, τους πίνακες, τη μορφοποίηση κώδικα και τη δομή των διεργασιών HelpDesk βασισμένη στο ITIL framework, έτοιμο για χρήση ή ενσωμάτωση σε κάποιο αποθετήριο (π.χ. GitHub, GitLab) ή εσωτερικό Wiki.
+
+Το Pro έχει υψηλή ζήτηση αυτή τη στιγμή
+Χρησιμοποιήθηκε άλλο μοντέλο για αυτή την απάντηση. Αυτή η ενέργεια δεν συνυπολογίστηκε στο όριό σας.
+
+
+
+Το Gemini είναι AI και μπορεί να κάνει λάθη, συμπεριλαμβανομένων των πληροφοριών σχετικά με άτομα. Το απόρρητό σας και το GeminiΑνοίγει σε νέο παράθυρο
+
 # 🖥️ HelpDesk Processes — ITIL Framework & Operations
 
 > Πλήρης οδηγός διαδικασιών IT Support — από τη θεωρία ITIL μέχρι την καθημερινή πράξη του HelpDesk.
@@ -8,11 +339,11 @@
 ## 🗺️ Πίνακας Περιεχομένων
 
 1. [Τι είναι το ITIL;](#-1-τι-είναι-το-itil)
-2. [Incident Management](#-2-incident-management)
-3. [Problem Management](#-3-problem-management)
-4. [Change Management](#-4-change-management)
+2. [Incident Management](#-2-incident-management-διαχείριση-περιστατικών)
+3. [Problem Management](#-3-problem-management-διαχείριση-προβλημάτων)
+4. [Change Management](#-4-change-management-διαχείριση-αλλαγών)
 5. [SLA / SLO / SLI](#-5-sla--slo--sli)
-6. [Escalation Tiers](#-6-escalation-tiers)
+6. [Escalation Tiers](#-6-escalation-tiers-επίπεδα-υποστήριξης)
 7. [Κύκλος Ζωής Ticket](#-7-κύκλος-ζωής-ticket)
 8. [Επικοινωνία με Χρήστες](#-8-επικοινωνία-με-χρήστες)
 
@@ -20,313 +351,117 @@
 
 ## 📖 1. Τι είναι το ITIL;
 
-Το **ITIL (Information Technology Infrastructure Library)** είναι ένα σύνολο βέλτιστων πρακτικών για τη διαχείριση IT υπηρεσιών. Δεν είναι εργαλείο ή λογισμικό — είναι **φιλοσοφία και μεθοδολογία**.
+Το **ITIL (Information Technology Infrastructure Library)** είναι ένα κορυφαίο, παγκόσμιο σύνολο βέλτιστων πρακτικών για τη διαχείριση IT υπηρεσιών (ITSM). Δεν είναι λογισμικό ή συγκεκριμένο εργαλείο — είναι μια **φιλοσοφία και μεθοδολογία** που εστιάζει στην ευθυγράμμιση των IT υπηρεσιών με τις ανάγκες της επιχείρησης.
 
-> *"Η IT δεν υπάρχει για να διαχειρίζεται servers — υπάρχει για να εξυπηρετεί την επιχείρηση."*
+> *"Το IT δεν υπάρχει απλά για να διαχειρίζεται servers και καλώδια — υπάρχει για να προσδίδει αξία και να εξυπηρετεί τους στόχους της επιχείρησης."*
 
 **Γιατί το χρησιμοποιούν οι εταιρείες:**
-- Κοινή γλώσσα μεταξύ IT και business
-- Μετρήσιμη ποιότητα υπηρεσιών μέσω SLA
-- Λιγότερα incidents μέσω proactive διαχείρισης
-- Τυποποιημένες διαδικασίες — λιγότερα λάθη
+* Δημιουργεί **κοινή γλώσσα** επικοινωνίας μεταξύ IT τμημάτων και business stakeholders.
+* Προσφέρει **μετρήσιμη ποιότητα** υπηρεσιών μέσω συγκεκριμένων δεικτών.
+* Μειώνει τον χρόνο αδράνειας (downtime) μέσω proactive διαχείρισης.
+* Καθιερώνει **τυποποιημένες διαδικασίες**, ελαχιστοποιώντας τα ανθρώπινα λάθη.
 
-**Βασικές Διεργασίες ITIL:**
-
-```
-Service Desk (κεντρικό σημείο επαφής)
-├── Incident Management      → Επίλυση διακοπών υπηρεσιών
-├── Problem Management       → Εύρεση root cause
-├── Change Management        → Ελεγχόμενες αλλαγές
-├── Request Fulfillment      → Εξυπηρέτηση αιτημάτων (νέο laptop, πρόσβαση κτλ.)
-├── Configuration Management → Καταγραφή assets (CMDB)
-└── Knowledge Management     → Βάση γνώσης (Known Errors, Workarounds)
-```
+**Βασικοί Πυλώνες (ITIL Lifecycle):**
+* **Service Strategy:** Ποια είναι η στρατηγική και τι υπηρεσίες προσφέρουμε.
+* **Service Design:** Σχεδιασμός νέων ή αλλαγμένων υπηρεσιών.
+* **Service Transition:** Ομαλή μετάβαση των αλλαγών στο παραγωγικό περιβάλλον.
+* **Service Operation:** Η καθημερινή λειτουργία (εδώ ανήκει κυρίως το HelpDesk).
+* **Continual Service Improvement:** Συνεχής βελτίωση των παρεχόμενων υπηρεσιών.
 
 ---
 
-## 🚨 2. Incident Management
+## 🚨 2. Incident Management (Διαχείριση Περιστατικών)
 
-### Τι είναι Incident;
+**Ορισμός:** Ένα *Incident (Περιστατικό)* είναι οποιαδήποτε μη προγραμματισμένη διακοπή ή υποβάθμιση της ποιότητας μιας IT υπηρεσίας. 
+* *Παράδειγμα:* "Ο εκτυπωτής στον 2ο όροφο δεν λειτουργεί" ή "Το σύστημα ERP έπεσε".
 
-> **Incident** = οποιοδήποτε απρόβλεπτο γεγονός που διακόπτει ή υποβαθμίζει μια IT υπηρεσία.
+**Πρωταρχικός Στόχος:**
+Η **ταχύτερη δυνατή επαναφορά** της κανονικής λειτουργίας της υπηρεσίας, ελαχιστοποιώντας τον αντίκτυπο στην επιχείρηση. Δεν ψάχνουμε απαραίτητα το "γιατί" χάλασε σε αυτή τη φάση, αλλά το "πώς θα δουλέψει τώρα" (συχνά μέσω κάποιου workaround).
 
-| Παραδείγματα Incident | ΔΕΝ είναι Incident |
-|----------------------|-------------------|
-| Ο χρήστης δεν μπορεί να συνδεθεί στο VPN | Αίτημα για νέο laptop |
-| Ο server είναι down | Reset κωδικού (= Service Request) |
-| Το email δεν λειτουργεί | Ερώτηση "Πώς να κάνω X;" (= Service Request) |
-| BSOD σε workstation | Εγκατάσταση νέου software (= Change) |
-
-### Διαδικασία Incident Management
-
-```
-1. DETECTION       → Χρήστης καλεί / email / monitoring alert / walk-in
-       ↓
-2. LOGGING         → Δημιουργία ticket με όλες τις πληροφορίες
-       ↓
-3. CATEGORIZATION  → Hardware / Software / Network / Security / Access
-       ↓
-4. PRIORITIZATION  → Βάσει Impact × Urgency (Priority Matrix)
-       ↓
-5. DIAGNOSIS       → Tier 1: έως 30 λεπτά προσπάθεια
-       ↓
-6. ESCALATION      → Αν δεν λυθεί → Tier 2/3
-       ↓
-7. RESOLUTION      → Εφαρμογή λύσης + επιβεβαίωση από χρήστη
-       ↓
-8. CLOSURE         → Documentation + Knowledge Base update
-```
-
-### Priority Matrix
-
-| | **Υψηλό Urgency** | **Χαμηλό Urgency** |
-|---|---|---|
-| **Υψηλό Impact** | 🔴 **P1 — Critical** | 🟠 **P2 — High** |
-| **Χαμηλό Impact** | 🟡 **P3 — Medium** | 🟢 **P4 — Low** |
-
-- **Impact** = Πόσοι χρήστες / επιχειρησιακές διεργασίες επηρεάζονται
-- **Urgency** = Πόσο γρήγορα χρειάζεται λύση
-
-| Priority | Παράδειγμα | Response Time | Resolution Time |
-|----------|-----------|--------------|----------------|
-| **P1 Critical** | Ολόκληρο το δίκτυο down | 15 λεπτά | 4 ώρες |
-| **P2 High** | Email server down | 30 λεπτά | 8 ώρες |
-| **P3 Medium** | 1 χρήστης δεν εκτυπώνει | 2 ώρες | 24 ώρες |
-| **P4 Low** | Αίτημα για νέο mouse | 8 ώρες | 72 ώρες |
-
-### Major Incident (P1) — Διαδικασία
-
-Όταν ανοίγει P1, ενεργοποιείται ειδική διαδικασία:
-
-```
-1. Άμεση ειδοποίηση IT Manager + Tier 2/3 + Business Owner
-2. War Room — dedicated Teams channel / conference call
-3. Incident Commander (συντονίζει — ΔΕΝ κάνει technical work)
-4. Updates κάθε 30 λεπτά προς stakeholders
-5. Post-Incident Review (PIR) εντός 48 ωρών από την επίλυση
-```
+**Βήματα Διαδικασίας:**
+1. Αναγνώριση & Καταγραφή (Logging)
+2. Κατηγοριοποίηση & Ορισμός Προτεραιότητας (Categorization & Prioritization)
+3. Αρχική Διάγνωση (First-line diagnosis)
+4. Κλιμάκωση (Escalation) - *αν απαιτείται*
+5. Επίλυση και Ανάκαμψη (Resolution & Recovery)
+6. Κλείσιμο Ticket
 
 ---
 
-## 🔍 3. Problem Management
+## 🔍 3. Problem Management (Διαχείριση Προβλημάτων)
 
-### Incident vs Problem
+**Ορισμός:** Το *Problem (Πρόβλημα)* είναι η **κρυφή ή βαθύτερη αιτία (root cause)** ενός ή περισσοτέρων Incidents.
+* *Παράδειγμα:* "Ο εκτυπωτής χαλάει κάθε μέρα στις 10:00 (Incidents). Το Problem είναι ότι υπάρχει ελαττωματικό firmware που κολλάει στο καθημερινό automated report."
 
-| | Incident | Problem |
-|---|---|---|
-| **Τι είναι** | Το σύμπτωμα | Η αιτία |
-| **Στόχος** | Γρήγορη επίλυση | Εύρεση root cause |
-| **Χρόνος** | Άμεσα | Μέρες / εβδομάδες |
-| **Παράδειγμα** | "Ο server είναι down" | "Γιατί πέφτει κάθε Δευτέρα;" |
+**Πρωταρχικός Στόχος:**
+Να εντοπίσει την αιτία, να αποτρέψει την επανεμφάνιση των περιστατικών (proactive) και να ελαχιστοποιήσει τον αντίκτυπο αυτών που δεν μπορούν να αποφευχθούν.
 
-### Root Cause Analysis — 5 Whys
-
-```
-Incident: Ο χρήστης δεν μπορεί να εκτυπώσει
-
-Why 1: → Ο printer spooler service είναι stopped
-Why 2: → Κατέρρευσε λόγω corrupt print job
-Why 3: → Ο χρήστης έστειλε 500MB PDF στον printer
-Why 4: → Δεν υπάρχει όριο μεγέθους print job στο GPO
-Why 5: → Ποτέ δεν ορίστηκε στην πολιτική
-
-Root Cause: Έλλειψη GPO για max print job size
-Permanent Fix: Νέο GPO → max print job = 50MB
-```
-
-### Known Error Database (KEDB)
-
-Όταν βρεθεί root cause αλλά δεν υπάρχει ακόμα permanent fix:
-
-```
-Known Error: #KE-2025-047
-Τίτλος: Printer spooler κολλάει με αρχεία > 100MB
-Workaround: Restart Print Spooler service (services.msc → Spooler → Restart)
-Status: Permanent fix σε εξέλιξη (GPO deployment Q3 2025)
-```
+| Χαρακτηριστικό | Incident | Problem |
+| :--- | :--- | :--- |
+| **Εστίαση** | Ταχύτητα (Επαναφορά τώρα) | Ανάλυση (Εύρεση Root Cause) |
+| **Χρόνος** | Βραχυπρόθεσμα | Μακροπρόθεσμα |
+| **Αποτέλεσμα** | Workaround (Προσωρινή Λύση) | Permanent Fix (Μόνιμη Λύση) |
 
 ---
 
-## 🔄 4. Change Management
+## ⚙️ 4. Change Management (Διαχείριση Αλλαγών)
 
-### Γιατί Υπάρχει;
+**Ορισμός:** Η διαδικασία ελέγχου του κύκλου ζωής όλων των αλλαγών (προσθήκες, τροποποιήσεις ή αφαιρέσεις) που μπορεί να επηρεάσουν τις IT υπηρεσίες.
 
-> Στατιστικά, **70–80% των incidents** προκαλούνται από αλλαγές που δεν έγιναν σωστά.
+**Πρωταρχικός Στόχος:**
+Η εφαρμογή αλλαγών με ελάχιστο ρίσκο και διακοπές (downtime).
 
-### Τύποι Change
-
-| Τύπος | Περιγραφή | Παράδειγμα | Έγκριση |
-|-------|-----------|-----------|---------|
-| **Standard** | Pre-approved, low risk, routine | Password reset, RAM upgrade | Δεν χρειάζεται |
-| **Normal** | Απαιτεί CAB approval | Server upgrade, new firewall rule | CAB Meeting |
-| **Emergency** | Urgent — για P1 incidents | Critical security patch | Emergency CAB |
-
-> **CAB = Change Advisory Board** — επιτροπή που εγκρίνει Normal Changes.
-
-### Change Request Process
-
-```
-1. RFC (Request for Change) → Τι αλλάζει, γιατί, πότε
-2. Impact Assessment        → Τι μπορεί να σπάσει;
-3. Rollback Plan            → Πώς επιστρέφουμε αν αποτύχει;
-4. CAB Approval
-5. Implementation (σε maintenance window)
-6. Testing & Verification
-7. Closure ή Rollback
-```
-
-> 💡 **Maintenance Window:** Συνήθως βράδια (22:00–06:00) ή Σαββατοκύριακο — περίοδος χαμηλής χρήσης για αλλαγές.
+**Τύποι Αλλαγών:**
+* **Standard Change:** Προ-εγκεκριμένες, χαμηλού ρίσκου αλλαγές (π.χ. δημιουργία νέου χρήστη, αλλαγή μπαταρίας UPS).
+* **Normal Change:** Απαιτούν σχεδιασμό, αξιολόγηση και έγκριση από το **CAB (Change Advisory Board)** πριν την εφαρμογή (π.χ. αναβάθμιση κεντρικού server).
+* **Emergency Change:** Αλλαγές που πρέπει να γίνουν άμεσα για την αποκατάσταση κρίσιμου περιστατικού (π.χ. εφαρμογή security patch για zero-day vulnerability).
 
 ---
 
 ## 📊 5. SLA / SLO / SLI
 
-| Όρος | Τι είναι | Παράδειγμα |
-|------|---------|-----------|
-| **SLA** (Service Level Agreement) | Επίσημη συμφωνία IT ↔ Business | "P1 incidents επιλύονται σε 4 ώρες" |
-| **SLO** (Service Level Objective) | Εσωτερικός στόχος (πιο αυστηρός από SLA) | "P1 incidents να λύνονται σε 3 ώρες" |
-| **SLI** (Service Level Indicator) | Η μέτρηση που αποδεικνύει αν πετύχαμε | "Μέσος χρόνος επίλυσης P1: 2.5 ώρες" |
+Για να μετρηθεί η απόδοση του HelpDesk, χρησιμοποιούμε 3 αλληλένδετους όρους που συχνά συγχέονται:
 
-### Βασικές Μετρήσεις HelpDesk
-
-| Μέτρηση | Ορισμός | Benchmark |
-|---------|---------|-----------|
-| **MTTR** (Mean Time To Resolve) | Μέσος χρόνος επίλυσης | P1: <4h, P3: <24h |
-| **MTTA** (Mean Time To Acknowledge) | Μέσος χρόνος πρώτης απόκρισης | < 15 λεπτά |
-| **FCR** (First Call Resolution) | % tickets που λύνονται στην πρώτη επαφή | > 70% |
-| **Backlog** | Αριθμός ανοιχτών tickets | < 10% εβδομαδιαίου volume |
-| **CSAT** (Customer Satisfaction) | Βαθμολογία ικανοποίησης χρηστών | > 85% |
-| **Reopen Rate** | % tickets που ανοίγουν ξανά | < 5% |
-
-### SLA Breach — Τι Γίνεται;
-
-```
-Ticket ανοιχτό → Timer ξεκινά
-       │
-       ├─ 50% SLA time  → Reminder notification στον technician
-       ├─ 75% SLA time  → Warning + auto-escalation στον supervisor
-       └─ 100% (breach) → Manager alert + escalation report
-```
+| Όρος | Τι σημαίνει; | Εξήγηση | Παράδειγμα |
+| :--- | :--- | :--- | :--- |
+| **SLA** | Service Level *Agreement* | Η επίσημη **συμφωνία** (συμβόλαιο) με τον πελάτη/χρήστη. Αν παραβιαστεί, υπάρχουν συνέπειες (π.χ. επιστροφή χρημάτων, πέναλτι). | *"Το σύστημα θα είναι online το 99.9% του χρόνου κάθε μήνα."* |
+| **SLO** | Service Level *Objective* | Ο εσωτερικός **στόχος** της ομάδας IT, που πρέπει να είναι αυστηρότερος από το SLA για να υπάρχει περιθώριο ασφαλείας. | *"Ο στόχος μας (SLO) είναι 99.95% uptime."* |
+| **SLI** | Service Level *Indicator* | Η **πραγματική μέτρηση** απόδοσης (το νούμερο). | *"Αυτό τον μήνα, το uptime ήταν 99.97%."* |
 
 ---
 
-## 📈 6. Escalation Tiers
+## 🏢 6. Escalation Tiers (Επίπεδα Υποστήριξης)
 
-```
-┌──────────────────────────────────────────┐
-│  Tier 0 — Self-Service                   │
-│  FAQ, Knowledge Base, Password Portal    │
-└──────────────────┬───────────────────────┘
-                   │ αν δεν λυθεί
-                   ▼
-┌──────────────────────────────────────────┐
-│  Tier 1 — HelpDesk                       │
-│  Γενική υποστήριξη, συνηθισμένα issues   │
-│  Στόχος: 70–80% resolution rate          │
-└──────────────────┬───────────────────────┘
-                   │ αν δεν λυθεί σε ~30 λεπτά
-                   ▼
-┌──────────────────────────────────────────┐
-│  Tier 2 — Desktop Support / Sysadmin     │
-│  Βαθύτερη τεχνική γνώση, on-site        │
-│  AD, servers, complex networking         │
-└──────────────────┬───────────────────────┘
-                   │ αν χρειαστεί expertise
-                   ▼
-┌──────────────────────────────────────────┐
-│  Tier 3 — Senior Engineers / Vendors     │
-│  Infrastructure, bugs, vendor support    │
-└──────────────────────────────────────────┘
-```
+Η οργάνωση του IT Support δομείται συνήθως σε επίπεδα, ώστε να διαχειρίζεται αποτελεσματικά τον όγκο των αιτημάτων.
 
-### Πότε να Κάνεις Escalation από Tier 1
-
-```
-✓ Πέρασαν 30 λεπτά χωρίς επίλυση
-✓ Επηρεάζει παραπάνω από 1 χρήστη
-✓ Χρειάζεται on-site παρουσία
-✓ Είναι server/infrastructure related
-✓ Πιθανό security incident
-✓ Κίνδυνος SLA breach
-```
-
-### Τι Περιλαμβάνεις στο Escalation
-
-```
-✓ Τι ανέφερε ο χρήστης (αυτολεξεί)
-✓ Τι έχεις ήδη δοκιμάσει
-✓ Αποτελέσματα diagnostics (ping, ipconfig, event logs)
-✓ Screenshots / error messages
-✓ Πότε άρχισε το πρόβλημα
-✓ Αν επηρεάζει και άλλους χρήστες
-```
+* **Tier 1 (First-Line / HelpDesk):** Η "πρώτη γραμμή". Υποδέχονται τα calls/tickets, κάνουν βασικό troubleshooting (passwords, basic app issues) και καταγράφουν σωστά το πρόβλημα. Εάν δεν μπορούν να το λύσουν άμεσα, το προωθούν.
+* **Tier 2 (Desktop / Technical Support):** Πιο έμπειροι τεχνικοί. Διαχειρίζονται πιο σύνθετα προβλήματα που απαιτούν βαθύτερη γνώση του συστήματος (π.χ. network troubleshooting, complex software bugs).
+* **Tier 3 (Specialist / Engineering / DevOps):** Οι "Gurus". Εδώ καταλήγουν προβλήματα αρχιτεκτονικής, servers, databases, ή bugs που απαιτούν αλλαγές στον κώδικα της εφαρμογής.
+* **Tier 4 (External Vendors):** Υποστήριξη από τρίτους κατασκευαστές (π.χ. Microsoft, Cisco, ISP).
 
 ---
 
 ## 🔄 7. Κύκλος Ζωής Ticket
 
-```
-NEW → ASSIGNED → IN PROGRESS → PENDING → RESOLVED → CLOSED
-                                   │
-                      (αναμονή χρήστη ή 3rd party)
-```
+Κάθε αίτημα ακολουθεί μια συγκεκριμένη διαδρομή (Status) μέσα στο σύστημα (π.χ. Jira, ServiceNow, Zendesk):
 
-| Status | Σημαίνει | Ποιος ενεργεί |
-|--------|---------|--------------|
-| **New** | Μόλις δημιουργήθηκε | Auto-assign |
-| **Assigned** | Έχει ανατεθεί σε technician | Technician |
-| **In Progress** | Γίνεται ενεργή δουλειά | Technician |
-| **Pending** | Αναμονή για χρήστη / vendor / approval | Χρήστης ή 3rd party |
-| **Resolved** | Λύση εφαρμόστηκε, αναμονή επιβεβαίωσης | Χρήστης |
-| **Closed** | Επιβεβαιώθηκε ή auto-close μετά 48-72h | System |
-
-> ⚠️ Ποτέ μην κλείνεις ticket χωρίς επιβεβαίωση. Αν δεν απαντήσει ο χρήστης → auto-close με notification.
+1.  **New / Open:** Το ticket μόλις άνοιξε, δεν το έχει αναλάβει κανείς.
+2.  **Assigned:** Το ticket ανατέθηκε σε τεχνικό ή ομάδα.
+3.  **In Progress:** Ο τεχνικός εργάζεται ενεργά πάνω στο πρόβλημα.
+4.  **Pending / Waiting:** Η διαδικασία έχει παγώσει. Μπορεί να είναι *Waiting for User* (ζητήθηκαν διευκρινίσεις) ή *Waiting for Vendor* (αναμονή από τρίτο προμηθευτή).
+5.  **Resolved:** Δόθηκε λύση στο πρόβλημα, αλλά εκκρεμεί η επιβεβαίωση από τον χρήστη.
+6.  **Closed:** Το ticket έχει κλείσει οριστικά (συνήθως αυτόματα μετά από x ημέρες από το Resolved).
 
 ---
 
-## 💬 8. Επικοινωνία με Χρήστες
+## 🗣️ 8. Επικοινωνία με Χρήστες
 
-### Βασικές Αρχές
+Τα τεχνικά skills είναι μόνο το μισό ενός καλού HelpDesk. Το άλλο μισό είναι το **Customer Service**.
 
-**Acknowledge γρήγορα — έστω και χωρίς λύση:**
-```
-"Έλαβα το αίτημά σου και ασχολούμαι αμέσως.
-Θα σε ενημερώσω σε 15 λεπτά."
-```
-
-**Μίλα στη γλώσσα του χρήστη:**
-```
-❌ "Υπάρχει πρόβλημα στο DNS resolution του domain controller."
-✅ "Το σύστημα που βρίσκει τους πόρους του δικτύου δεν ανταποκρίνεται.
-    Εργάζομαι να το φτιάξω τώρα."
-```
-
-**Ενημέρωσε για πρόοδο — ακόμα και αν δεν υπάρχει νέο:**
-```
-"Δεν έχω ακόμα λύση, αλλά συνεχίζω να εργάζομαι πάνω σε αυτό.
-Θα σε ενημερώσω σε 30 λεπτά."
-```
-
-**Πριν κλείσεις ticket — πάντα επιβεβαίωσε:**
-```
-"Έλυσα το πρόβλημα. Μπορείς να δοκιμάσεις και να μου επιβεβαιώσεις
-ότι όλα λειτουργούν κανονικά;"
-```
-
-### Δύσκολες Καταστάσεις
-
-| Κατάσταση | ❌ Λάθος | ✅ Σωστό |
-|-----------|---------|---------|
-| Εκνευρισμένος χρήστης | "Δεν φταίω εγώ" | "Καταλαβαίνω ότι αυτό σε δυσκολεύει. Ας το λύσουμε μαζί." |
-| "Δεν ήταν ποτέ πρόβλημα πριν" | Άμυνα | "Έχεις δίκιο, ας δούμε τι άλλαξε." |
-| Εκτός πολιτικής αίτημα | Απλό "Δεν γίνεται" | "Αυτό δεν το καλύπτει η πολιτική, αλλά μπορώ να σε βοηθήσω με [εναλλακτική]." |
-| Επαναλαμβανόμενο πρόβλημα | Ξαναλύσε το ίδιο | Καταγραφή ως Problem — εύρεση root cause |
-
----
-
-## 📚 Πηγές Μελέτης
-
-- [ITIL 4 Foundation](https://www.axelos.com/certifications/itil-service-management/itil-4-foundation) — Επίσημη πιστοποίηση
-- [ServiceNow Documentation](https://docs.servicenow.com) — Δημοφιλές ITSM tool
-- [HDI Help Desk Institute](https://www.thinkhdi.com) — Resources για Support professionals
-```
+**Βέλτιστες Πρακτικές:**
+* **Ενσυναίσθηση (Empathy):** Αναγνώρισε την απογοήτευση του χρήστη. Ένα απλό *"Καταλαβαίνω ότι αυτό σας καθυστερεί την εργασία, ας το λύσουμε άμεσα"* κάνει θαύματα.
+* **Απόφυγε την ξύλινη IT γλώσσα (Jargon):** Μην λες *"Πρέπει να κάνω flush το DNS και release την IP γιατί υπάρχει conflict στον DHCP."* Πες *"Θα κάνω μια επανεκκίνηση στη σύνδεση του υπολογιστή σας με το δίκτυο."*
+* **Συνεχείς Ενημερώσεις (Keep them in the loop):** Αν ένα πρόβλημα θα πάρει μέρες, στείλε ένα μικρό update (π.χ. *"Εργαζόμαστε ακόμα πάνω σε αυτό"*) ώστε ο χρήστης να μην νιώθει ότι τον ξέχασαν.
+* **Under-promise, Over-deliver:** Μην υπόσχεσαι λύση σε 5 λεπτά αν δεν είσαι σίγουρος. Δώσε ρεαλιστικά timeframes.
+Helpdesk processes.md
+Εμφανίζεται το στοιχείο Helpdesk processes.md.
