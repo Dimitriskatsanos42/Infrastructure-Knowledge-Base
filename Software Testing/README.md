@@ -217,10 +217,3 @@ should_ReturnError_When_PasswordIsTooShort()
 
 ---
 
-## 🤝 Συνεισφορά
-
-Για προσθήκη νέου υλικού τεκμηρίωσης ή testing artifacts, ακολουθήστε τη δομή φακέλων του repository και ενημερώστε αναλόγως το παρόν README.
-
----
-
-*Καλό testing!* 🚀
