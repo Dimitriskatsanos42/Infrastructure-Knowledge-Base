@@ -36,5 +36,5 @@ Scripts/
 | `system-health-check.ps1` | PowerShell | CPU, RAM, Disk, Services σε Windows |
 | `ad-user-management.ps1` | PowerShell | Bulk AD users από CSV |
 | `event-log-analyzer.ps1` | PowerShell | Ανίχνευση brute force (Event 4625) |
-| `server-health-check.sh` | Bash | Health check Linux server |
-| `backup-with-rsync.sh` | Bash | Automated backup |
+| `backup-with-rsync.sh` | Bash | Health check Linux server |
+| `server-health-check.sh backup-with-rsync.sh` | Bash | Automated backup |
