@@ -1,45 +1,155 @@
 #!/usr/bin/env bash
 # ============================================
-
-# Script: system_health_dashboard.sh.sh
-# # Περιγραφή: Δημιουργεί αναφορά υγείας του Linux συστήματος 
-#              με πληροφορίες για CPU, RAM, δίσκους, δίκτυο, διεργασίες και ενεργές υπηρεσίες.
-#            
+#
+# Script: server_security_audit.sh
+# Περιγραφή: Ελέγχει την υγεία και την ασφάλεια ενός Linux server
+#             με ελέγχους CPU, RAM, δίσκου, υπηρεσιών, ports
+#             και αποτυχημένων login attempts.
+#
 # Author: Dimitris Katsanos
 # Date: 2026
-# Usage: ./system_health_dashboard.sh [--services nginx,ssh,ufw]
-# ============================================ 
+# Usage: ./server_security_audit.sh
+#
+# ============================================
 
 set -euo pipefail
 
-REPORT="system_report_$(date +%F_%H-%M-%S).txt"
+REPORT="security_audit_$(date +%F_%H-%M-%S).txt"
+
+
+check_status() {
+
+VALUE=$1
+LIMIT=$2
+NAME=$3
+
+if [ "$VALUE" -ge "$LIMIT" ]; then
+    echo "[WARNING] $NAME : $VALUE%"
+else
+    echo "[OK] $NAME : $VALUE%"
+fi
+
+}
+
 
 {
-echo "===== SYSTEM HEALTH REPORT ====="
-echo "Generated: $(date)"
+
+echo "================================="
+echo " LINUX SERVER SECURITY AUDIT"
+echo "================================="
 echo
-echo "Hostname: $(hostname)"
-echo "Uptime:"
-uptime
-echo
-echo "CPU:"
-top -bn1 | head -5
-echo
-echo "Memory:"
-free -h
-echo
-echo "Disk:"
-df -h
-echo
-echo "Network:"
-ip -brief address || ifconfig
-echo
-echo "Top 10 Processes:"
-ps -eo pid,user,%cpu,%mem,comm --sort=-%cpu | head
-echo
-echo "Running Services:"
-systemctl list-units --type=service --state=running 2>/dev/null | head -20 || true
-} | tee "$REPORT"
+
+echo "Date:"
+date
 
 echo
-echo "Report saved to: $REPORT"
+echo "Hostname:"
+hostname
+
+
+echo
+echo "===== SYSTEM LOAD ====="
+
+LOAD=$(uptime | awk -F'load average:' '{print $2}')
+
+echo "Load Average:$LOAD"
+
+
+
+echo
+echo "===== MEMORY CHECK ====="
+
+MEM=$(free | awk '/Mem/ {print int($3/$2 *100)}')
+
+check_status "$MEM" 80 "Memory Usage"
+
+
+
+echo
+echo "===== DISK CHECK ====="
+
+df -h | grep '^/dev' | while read line
+do
+
+USAGE=$(echo $line | awk '{print $5}' | tr -d '%')
+PART=$(echo $line | awk '{print $1}')
+
+check_status "$USAGE" 85 "Disk $PART"
+
+done
+
+
+
+echo
+echo "===== RUNNING SERVICES ====="
+
+SERVICES=("ssh" "cron" "systemd-journald")
+
+for service in "${SERVICES[@]}"
+do
+
+if systemctl is-active --quiet $service
+then
+    echo "[OK] $service running"
+else
+    echo "[WARNING] $service stopped"
+fi
+
+done
+
+
+
+echo
+echo "===== OPEN NETWORK PORTS ====="
+
+ss -tuln
+
+
+
+echo
+echo "===== FAILED LOGIN ATTEMPTS ====="
+
+if command -v lastb >/dev/null
+then
+
+FAILED=$(lastb | wc -l)
+
+if [ "$FAILED" -gt 1 ]
+then
+    echo "[WARNING] Failed logins detected: $FAILED"
+else
+    echo "[OK] No failed login attempts"
+fi
+
+else
+
+echo "lastb command not available"
+
+fi
+
+
+
+echo
+echo "===== USERS WITH SUDO ACCESS ====="
+
+grep -E 'sudo|wheel' /etc/group
+
+
+
+echo
+echo "===== TOP CPU PROCESSES ====="
+
+ps aux --sort=-%cpu | head -6
+
+
+echo
+echo "===== AUDIT FINISHED ====="
+
+
+} | tee "$REPORT"
+
+
+
+echo
+echo "Report saved:"
+echo "$REPORT"
