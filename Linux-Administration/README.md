@@ -9,10 +9,11 @@
 | Αρχείο | Θέμα |
 |--------|------|
 | [`bash-scripting.md`](./bash-scripting.md) | Variables, loops, conditionals, cron jobs | 
-| [`linux-advanced-administration.md`](./linux-advanced-administration.md) | systemctl, journalctl, services management |
+| [`linux-advanced-administration.md`](./linux-advanced-administration.md) |  |
 | [`linux-basics.md`](./linux-basics.md) | Filesystem, permissions, users/groups, βασικές εντολές |
+| [`process-management.md`](./process-management.md) |  |
 | [`systemd-services.md`](./systemd-services.md) | systemctl, journalctl, services management |
-| [`systemd-services.md`](./) | systemctl, journalctl, services management |
+| [`process-management.md`](./process-management.md) | systemctl, journalctl, services management |
 | [`systemd-services.md`](./user-permissions-gr/md) | systemctl, journalctl, services management |
 
 
