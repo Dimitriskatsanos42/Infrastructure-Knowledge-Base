@@ -239,33 +239,32 @@ IT Department
 ## ⚠️ 6. Risk Assessment Matrix
 
 ### Risk scoring (Likelihood × Impact)
+
 | | Impact: Low | Impact: Medium | Impact: High |
-|---|---|---|---|
-| **Likelihood: Low** | Risk Score 1 | Risk Score 2 | Risk Score 3 |
-| **Likelihood: Medium** | Risk Score 2 | Risk Score 4 | Risk Score 6 |
-| **Likelihood: High** | Risk Score 3 | Risk Score 6 | Risk Score 9 |
+|---|:---:|:---:|:---:|
+| **Likelihood: Low** | 1 | 2 | 3 |
+| **Likelihood: Medium** | 2 | 4 | 6 |
+| **Likelihood: High** | 3 | 6 | 9 |
 
 | Score | Κατηγορία | Ενέργεια |
 |---|---|---|
-| 1-2 | Χαμηλό | Παρακολούθηση |
-| 3-4 | Μέτριο | Mitigation plan μέσα σε 30 μέρες |
-| 6-9 | Υψηλό | Άμεση ενέργεια, escalation σε management |
+| 1–2 | 🟢 Χαμηλό | Παρακολούθηση |
+| 3–4 | 🟡 Μέτριο | Mitigation plan μέσα σε 30 μέρες |
+| 6–9 | 🔴 Υψηλό | Άμεση ενέργεια, escalation σε management |
 
 ### 📝 Risk Register Template
-```markdown
+
 | Risk ID | Περιγραφή | Likelihood | Impact | Score | Mitigation | Owner |
-|---|---|---|---|---|---|---|
+|---|---|---|---|:---:|---|---|
 | RSK-001 | Παλιό firmware σε core switch, γνωστές ευπάθειες | Medium | High | 6 | Scheduled firmware update Q3 | Network Team |
 | RSK-002 | Δεν υπάρχει tested backup για SQL DB-002 | High | High | 9 | Backup test scheduled 2026-09-01 | DBA |
 | RSK-003 | Single point of failure — ένας μόνο DC στο branch office | Medium | Medium | 4 | Αξιολόγηση δεύτερου DC | IT Infra |
-```
 
 ---
 
 ## 🛍️ 7. Service Catalog — Παράδειγμα
 
-```markdown
-## Service Catalog — IT Department
+**Service Catalog — IT Department**
 
 | Υπηρεσία | Περιγραφή | SLA | Πώς να ζητηθεί |
 |---|---|---|---|
@@ -275,7 +274,6 @@ IT Department
 | VPN Access | Ενεργοποίηση remote access | 1 εργάσιμη μέρα | Service Request Portal |
 | Software Installation | Εγκατάσταση εγκεκριμένου λογισμικού | 1 εργάσιμη μέρα | Service Request Portal |
 | Shared Drive Access | Πρόσβαση σε folder/SharePoint | 4 ώρες | Service Request Portal (χρειάζεται data owner approval) |
-```
 
 ---
 
@@ -284,6 +282,7 @@ IT Department
 Στόχος: **προληπτική** παρακολούθηση resources ώστε να μην φτάνουμε σε incident.
 
 ### Metrics που παρακολουθούνται
+
 | Resource | Threshold για ενέργεια | Ενέργεια |
 |---|---|---|
 | Disk space (server) | >80% χρήση | Cleanup ή επέκταση storage |
@@ -293,35 +292,30 @@ IT Department
 | Mailbox storage (per user) | >90% quota | Ενημέρωση χρήστη / αύξηση quota |
 
 ### 📝 Capacity Report Template (μηνιαίο)
-```markdown
-## Capacity Report — Αύγουστος 2026
+
+**Capacity Report — Αύγουστος 2026**
 
 | System | Current Usage | Trend (3mo) | Projected full in | Action needed |
-|---|---|---|---|---|
+|---|:---:|---|---|---|
 | SRV-FILE01 (Storage) | 78% | +3%/μήνα | ~7 μήνες | Παρακολούθηση |
 | SRV-DB01 (Storage) | 88% | +5%/μήνα | ~2 μήνες | Άμεση επέκταση απαιτείται |
 | DHCP Scope 10.0.1.0/24 | 65% | Σταθερό | N/A | Καμία ενέργεια |
-```
 
 ---
 
 ## 🤝 9. Vendor / Contract Tracker
 
-```markdown
 | Vendor | Υπηρεσία/Προϊόν | Contract Start | Contract End | Renewal Notice | Contact | Annual Cost |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---:|
 | Microsoft | Microsoft 365 E3 (150 seats) | 2025-01-10 | 2027-01-10 | 90 μέρες πριν | [email] | €18,000 |
 | Dell | Hardware Warranty (Servers) | 2024-03-15 | 2027-03-15 | 60 μέρες πριν | [email] | €4,500 |
 | ISP Provider | Fiber Internet 500Mbps | 2023-06-01 | Αόριστο | N/A | [τηλέφωνο] | €3,600 |
-```
+
 > Χρήσιμο να έχεις **calendar reminders** για renewal notices, ώστε να μην "ξεχαστεί" ένα κρίσιμο συμβόλαιο μέχρι να λήξει.
 
 ---
 
 ## 🔬 10. Πλήρες Παράδειγμα — DR Test Report
-
-```markdown
-## DR Test Report
 
 **Test date:** 2026-06-15
 **System tested:** File Server (SRV-APP01) → Azure Site Recovery failover
@@ -332,23 +326,24 @@ IT Department
 - Επιβεβαίωση ακεραιότητας δεδομένων μετά το failover
 
 ### Αποτελέσματα
+
 | Βήμα | Αναμενόμενος χρόνος | Πραγματικός χρόνος | Status |
-|---|---|---|---|
+|---|:---:|:---:|:---:|
 | Ενεργοποίηση failover | 15 λεπτά | 12 λεπτά | ✅ |
 | VM boot στο DR site | 10 λεπτά | 18 λεπτά | ⚠️ Καθυστέρηση |
 | Επαλήθευση data integrity | 30 λεπτά | 25 λεπτά | ✅ |
 | DNS update/routing | 15 λεπτά | 15 λεπτά | ✅ |
-| **Συνολικός χρόνος** | 4 ώρες (target) | 3h 10min | ✅ Εντός RTO |
+| **Συνολικός χρόνος** | **4 ώρες (target)** | **3h 10min** | ✅ Εντός RTO |
 
 ### Ευρήματα
 - Η καθυστέρηση στο VM boot οφειλόταν σε χαμηλότερο VM size στο DR site από ό,τι στο production.
 
 ### Action Items
+
 | Ενέργεια | Owner | Deadline |
 |---|---|---|
 | Upgrade DR VM size ώστε να ταιριάζει με production | [Όνομα] | 2026-07-01 |
 | Επόμενο test | [Όνομα] | 2026-12-15 |
-```
 
 ---
 
