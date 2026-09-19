@@ -1,104 +1,177 @@
----
+# ☁️ Cloud Architecture: Advanced Topics & Real-World Design Patterns
 
-## 🔗 12. Προχωρημένη Δικτύωση στο Cloud (Advanced Cloud Networking)
-
-[#-12-προχωρημένη-δικτύωση-στο-cloud-advanced-cloud-networking](#-12-προχωρημένη-δικτύωση-στο-cloud-advanced-cloud-networking)
-
-Πέρα από το βασικό VPC, οι πραγματικές αρχιτεκτονικές χρειάζονται τρόπους να συνδέσουν πολλά δίκτυα μεταξύ τους — cloud με cloud, cloud με on-premises, ή VPC με VPC.
-
-- **VPC Peering:** Απευθείας ιδιωτική σύνδεση ανάμεσα σε δύο VPCs, σαν να ήταν στο ίδιο δίκτυο. Δεν επιτρέπει transitive routing (αν το A συνδέεται με το B και το B με το C, το A **δεν** βλέπει αυτόματα το C).
-- **Transit Gateway:** Λειτουργεί σαν κεντρικός "δικτυακός κόμβος" (hub) που συνδέει δεκάδες VPCs και on-premises δίκτυα μεταξύ τους, λύνοντας το πρόβλημα του transitive routing που έχει το Peering.
-- **Site-to-Site VPN:** Κρυπτογραφημένη σύνδεση μέσω του δημόσιου Internet ανάμεσα στο on-premises data center και το VPC (χρησιμοποιεί IPsec tunnels). Γρήγορο να στηθεί, αλλά η ταχύτητα εξαρτάται από τη σύνδεση Internet.
-- **Direct Connect (AWS) / ExpressRoute (Azure):** Αποκλειστική, φυσική ενσύρματη σύνδεση ανάμεσα στο data center του πελάτη και τον πάροχο cloud, χωρίς να περνά από το δημόσιο Internet. Προσφέρει σταθερό latency και μεγαλύτερο bandwidth — απαραίτητο για enterprise / hybrid workloads.
-- **DNS στο Cloud (π.χ. AWS Route 53):** Διαχειριζόμενη υπηρεσία DNS που εκτελεί και routing policies (π.χ. Latency-based, Geolocation, Weighted) για να στέλνει τον χρήστη στο πλησιέστερο ή πιο υγιές endpoint.
-- **NAT Gateway:** Επιτρέπει σε instances μέσα σε private subnet να βγαίνουν προς το Internet (π.χ. για updates), χωρίς όμως το Internet να μπορεί να ξεκινήσει σύνδεση προς αυτά.
-
-| Λύση Σύνδεσης      | Χρήση                                              | Χαρακτηριστικό                          |
-| ------------------- | --------------------------------------------------- | ---------------------------------------- |
-| VPC Peering          | 1-προς-1 σύνδεση VPCs                               | Απλό, χωρίς transitive routing           |
-| Transit Gateway       | Σύνδεση πολλαπλών VPCs/on-prem                      | Hub-and-spoke, scalable                  |
-| Site-to-Site VPN      | Γρήγορη hybrid σύνδεση                              | Μέσω Internet, κρυπτογραφημένο           |
-| Direct Connect        | Enterprise / high-throughput hybrid                | Αποκλειστική γραμμή, χαμηλό latency      |
+> **Μέρος του [Infrastructure Knowledge Base](../README.md)** — συνέχεια του [`cloud-fundamentals.md`](./cloud-fundamentals.md).
+> Εστιάζει σε αρχιτεκτονικά design patterns, διαγράμματα υποδομής και αποφάσεις (trade-offs) που συναντώνται σε πραγματικά production περιβάλλοντα, πέρα από τη θεωρία.
 
 ---
 
-## 🛡️ 13. Disaster Recovery & Business Continuity
+## 🗺️ Περιεχόμενα
 
-[#️-13-disaster-recovery--business-continuity](#️-13-disaster-recovery--business-continuity)
-
-Η ικανότητα ενός συστήματος να ανακάμπτει από αστοχίες (region outage, ανθρώπινο λάθος, cyberattack) μετριέται με δύο βασικές μετρικές:
-
-- **RTO (Recovery Time Objective):** Πόσος χρόνος επιτρέπεται να περάσει μέχρι το σύστημα να ξαναλειτουργήσει μετά από ένα incident.
-- **RPO (Recovery Point Objective):** Πόσα δεδομένα (σε χρόνο) είναι αποδεκτό να χαθούν — δηλαδή πόσο "παλιό" μπορεί να είναι το τελευταίο backup που θα χρησιμοποιηθεί.
-
-**Στρατηγικές DR (από φθηνότερη/αργότερη σε ακριβότερη/ταχύτερη):**
-
-1. **Backup & Restore:** Τακτικά backups σε άλλη περιοχή. Χαμηλό κόστος, αλλά υψηλό RTO (ώρες).
-2. **Pilot Light:** Ένα ελάχιστο, "σβηστό" αντίγραφο της critical υποδομής τρέχει σε δεύτερη περιοχή και ενεργοποιείται/scale-up όταν χρειαστεί.
-3. **Warm Standby:** Μια πλήρως λειτουργική αλλά μειωμένης κλίμακας έκδοση του συστήματος τρέχει συνεχώς σε δεύτερη περιοχή, έτοιμη να αναλάβει πλήρες load.
-4. **Multi-Site Active-Active:** Το σύστημα τρέχει ταυτόχρονα σε πολλαπλές περιοχές με real-time replication. Ελάχιστο RTO/RPO, αλλά το ακριβότερο σε κόστος και πολυπλοκότητα.
+1. [Reference Architecture: 3-Tier Web Application](#-1-reference-architecture-3-tier-web-application)
+2. [Προχωρημένη Δικτύωση](#-2-προχωρημένη-δικτύωση)
+3. [Disaster Recovery & Business Continuity](#-3-disaster-recovery--business-continuity)
+4. [Zero Trust Security Architecture](#-4-zero-trust-security-architecture)
+5. [Cost Optimization & FinOps](#-5-cost-optimization--finops)
+6. [CI/CD & Deployment Strategies](#-6-cicd--deployment-strategies)
+7. [Well-Architected Framework Checklist](#-7-well-architected-framework-checklist)
+8. [Γλωσσάρι Όρων](#-8-γλωσσάρι-όρων)
 
 ---
 
-## 💰 14. Cost Optimization & FinOps
+## 🏗️ 1. Reference Architecture: 3-Tier Web Application
 
-[#-14-cost-optimization--finops](#-14-cost-optimization--finops)
+Το πιο διαδεδομένο production pattern για web εφαρμογές είναι ο διαχωρισμός σε τρία επίπεδα — **Presentation**, **Application** και **Data** — καθένα σε ξεχωριστό subnet με διαφορετικό επίπεδο έκθεσης στο Internet. Ο στόχος είναι απλός: **κανένα κρίσιμο component δεν εκτίθεται άμεσα στο κοινό δίκτυο**.
 
-Το **FinOps** είναι η πρακτική συνεργασίας μηχανικών, οικονομικών και διοίκησης ώστε ο οργανισμός να έχει έλεγχο και πρόβλεψη στο κόστος του cloud.
+```mermaid
+flowchart TB
+    User["👤 Χρήστης"] --> DNS["Route 53 / DNS"]
+    DNS --> CDN["CloudFront CDN"]
+    CDN --> ALB["Application Load Balancer<br/>(Public Subnet)"]
 
-- **Right-Sizing:** Επιλογή του σωστού μεγέθους instance βάσει πραγματικής χρήσης (αποφυγή over-provisioning).
-- **Reserved Instances / Savings Plans:** Δέσμευση χρήσης για 1-3 χρόνια με σημαντική έκπτωση (έως ~70%) σε σύγκριση με το on-demand pricing.
-- **Spot Instances:** Χρήση αχρησιμοποίητης χωρητικότητας του παρόχου με τεράστια έκπτωση, με το ρίσκο να διακοπούν με μικρή προειδοποίηση — ιδανικό για batch jobs, CI/CD runners, fault-tolerant workloads.
-- **Auto Scaling:** Αυτόματη μείωση πόρων εκτός ωρών αιχμής, ώστε να μην πληρώνεις για ανενεργή χωρητικότητα.
-- **Tagging Strategy:** Ετικέτες (tags) σε κάθε πόρο (π.χ. `team`, `environment`, `project`) για να είναι δυνατή η κατανομή κόστους (cost allocation) ανά ομάδα/έργο.
-- **Storage Lifecycle Policies:** Αυτόματη μετάβαση παλιών δεδομένων σε φθηνότερες κλάσεις αποθήκευσης (π.χ. AWS S3 Standard → S3 Glacier).
+    subgraph VPC["VPC — 10.0.0.0/16"]
+        subgraph Public["Public Subnet"]
+            ALB
+            NAT["NAT Gateway"]
+        end
+
+        subgraph AppTier["Private Subnet — App Tier"]
+            EC2A["ECS Task / EC2 — AZ-1"]
+            EC2B["ECS Task / EC2 — AZ-2"]
+        end
+
+        subgraph DataTier["Private Subnet — Data Tier"]
+            RDS[("RDS Primary")]
+            RDSReplica[("RDS Read Replica")]
+        end
+
+        ALB --> EC2A
+        ALB --> EC2B
+        EC2A --> NAT
+        EC2B --> NAT
+        EC2A --> RDS
+        EC2B --> RDS
+        RDS -. async replication .-> RDSReplica
+    end
+
+    NAT --> Internet["🌐 Internet"]
+```
+
+### Αρχές σχεδίασης
+
+| Στοιχείο | Ρόλος | Γιατί έτσι |
+|---|---|---|
+| **Application Load Balancer** | Μοναδικό public-facing entry point | Κεντρικοποιεί το TLS termination και το health-checking, αποκρύπτοντας τα backend instances |
+| **App Tier (private subnet)** | Εκτελεί επιχειρησιακή λογική | Χωρίς δημόσια IP — προσβάσιμο μόνο μέσω του ALB |
+| **NAT Gateway** | Εξερχόμενη πρόσβαση για private instances | Επιτρέπει outbound κίνηση (π.χ. patches, API calls) χωρίς να δέχεται inbound συνδέσεις |
+| **Data Tier (isolated subnet)** | Αποθήκευση δεδομένων | Security Group που δέχεται κίνηση **αποκλειστικά** από το SG του App Tier — ποτέ από CIDR range |
+| **Read Replica** | Ανακούφιση read-heavy φόρτου | Αποσυμφορεί τον Primary, βελτιώνει latency για reporting/analytics queries |
+
+> **Καλή πρακτική:** Τα Security Groups πρέπει να αναφέρονται μεταξύ τους (`source: sg-xxxxx`) και όχι σε IP ranges. Έτσι το privilege παραμένει σωστό ακόμα κι αν αλλάξουν οι IPs των instances κατά το scaling.
 
 ---
 
-## 🌍 15. Multi-Cloud & Hybrid Στρατηγικές
+## 🔗 2. Προχωρημένη Δικτύωση
 
-[#-15-multi-cloud--hybrid-στρατηγικές](#-15-multi-cloud--hybrid-στρατηγικές)
+Καθώς μια αρχιτεκτονική μεγαλώνει πέρα από ένα μοναδικό VPC, προκύπτει η ανάγκη σύνδεσης πολλαπλών δικτύων — μεταξύ VPCs, ή μεταξύ cloud και on-premises υποδομής.
 
-- **Multi-Cloud:** Χρήση περισσότερων του ενός παρόχων (π.χ. AWS + Azure) ταυτόχρονα, συνήθως για να αποφευχθεί το **Vendor Lock-in**, να αξιοποιηθούν συγκεκριμένα δυνατά σημεία κάθε παρόχου, ή για λόγους κανονιστικής συμμόρφωσης.
-- **Vendor Lock-in:** Ο κίνδυνος να εξαρτηθεί ένας οργανισμός τόσο πολύ από τα proprietary εργαλεία ενός παρόχου, που το να μεταναστεύσει αλλού γίνεται τεχνικά ή οικονομικά ασύμφορο.
-- **Abstraction Layers:** Εργαλεία όπως το Terraform ή το Kubernetes βοηθούν να γράφεται κώδικας/configuration που είναι λιγότερο εξαρτημένο από συγκεκριμένο πάροχο.
-- **Hybrid Cloud σε πράξη:** Συνήθως συνδυάζεται με Direct Connect/ExpressRoute (ενότητα 12) ώστε τα on-premises συστήματα να επικοινωνούν με χαμηλό latency με το cloud.
+| Λύση | Τοπολογία | Ιδανικό για | Περιορισμός |
+|---|---|---|---|
+| **VPC Peering** | 1-προς-1 | Λίγα, στατικά VPCs | Δεν υποστηρίζει transitive routing |
+| **Transit Gateway** | Hub-and-spoke | Δεκάδες VPCs / hybrid connectivity | Επιπλέον κόστος ανά σύνδεση |
+| **Site-to-Site VPN** | Encrypted tunnel μέσω Internet | Γρήγορη υλοποίηση hybrid σύνδεσης | Latency εξαρτώμενο από το δημόσιο Internet |
+| **Direct Connect / ExpressRoute** | Αποκλειστική φυσική γραμμή | Enterprise, high-throughput, χαμηλό & σταθερό latency | Υψηλότερο κόστος, χρόνος εγκατάστασης |
 
----
+```mermaid
+flowchart LR
+    OnPrem["🏢 On-Premises<br/>Data Center"] -- "Direct Connect<br/>(dedicated line)" --> TGW["Transit Gateway"]
+    VPC1["VPC — Production"] --- TGW
+    VPC2["VPC — Staging"] --- TGW
+    VPC3["VPC — Shared Services"] --- TGW
+```
 
-## 🔐 16. Zero Trust Architecture
-
-[#-16-zero-trust-architecture](#-16-zero-trust-architecture)
-
-Παραδοσιακά μοντέλα ασφάλειας εμπιστεύονταν αυτόματα οτιδήποτε βρισκόταν "μέσα" στο δίκτυο (perimeter security). Το **Zero Trust** αντιστρέφει τη λογική:
-
-> "Never trust, always verify" — καμία συσκευή, χρήστης ή υπηρεσία δεν θεωρείται έμπιστη εξ ορισμού, ανεξάρτητα από το αν βρίσκεται εντός ή εκτός του δικτύου.
-
-- **Least Privilege Access:** Κάθε χρήστης/υπηρεσία παίρνει μόνο τα ελάχιστα δικαιώματα που χρειάζεται για τη δουλειά του, τίποτα παραπάνω.
-- **Micro-Segmentation:** Το δίκτυο χωρίζεται σε πολύ μικρές, απομονωμένες ζώνες, ώστε αν παραβιαστεί ένα σημείο, ο εισβολέας να μην μπορεί να κινηθεί ελεύθερα (lateral movement) στο υπόλοιπο δίκτυο.
-- **Continuous Verification:** Η ταυτότητα και τα δικαιώματα ελέγχονται σε κάθε αίτημα, όχι μόνο κατά το login.
-- **Identity as the New Perimeter:** Η ταυτότητα (identity) γίνεται το βασικό σημείο ελέγχου ασφαλείας, αντί για τα παραδοσιακά network firewalls.
+> **Γιατί Transit Gateway αντί για full-mesh Peering;**
+> Με *N* VPCs, το full-mesh Peering απαιτεί *N×(N-1)/2* συνδέσεις — πρακτικά μη διαχειρίσιμο πάνω από 4-5 VPCs. Το Transit Gateway μετατρέπει το πρόβλημα σε *N* απλές συνδέσεις προς έναν κεντρικό κόμβο δρομολόγησης, με ενιαίο σημείο ελέγχου για routing policies.
 
 ---
 
-## 🔁 17. DevOps & CI/CD Pipelines στο Cloud
+## 🛡️ 3. Disaster Recovery & Business Continuity
 
-[#-17-devops--cicd-pipelines-στο-cloud](#-17-devops--cicd-pipelines-στο-cloud)
+Κάθε στρατηγική DR ορίζεται από δύο μετρικές που πρέπει να συμφωνούνται **πριν** τον σχεδιασμό, όχι μετά από ένα incident:
 
-Η ενσωμάτωση αυτοματοποιημένων pipelines είναι ο πυρήνας του σύγχρονου cloud-native development.
+- **RTO (Recovery Time Objective):** μέγιστος αποδεκτός χρόνος μέχρι το σύστημα να ξαναλειτουργήσει.
+- **RPO (Recovery Point Objective):** μέγιστη αποδεκτή απώλεια δεδομένων, εκφρασμένη σε χρόνο.
 
-- **CI (Continuous Integration):** Κάθε αλλαγή κώδικα ενσωματώνεται αυτόματα, χτίζεται (build) και τεστάρεται.
-- **CD (Continuous Delivery/Deployment):** Ο κώδικας που περνά τα tests προωθείται αυτόματα προς staging ή και production.
-- **Δημοφιλή Εργαλεία:** GitHub Actions, GitLab CI/CD, Jenkins, AWS CodePipeline, ArgoCD (GitOps για Kubernetes).
-- **Blue-Green Deployment:** Δύο πανομοιότυπα περιβάλλοντα (Blue = τρέχον, Green = νέα έκδοση). Η κίνηση μεταφέρεται ακαριαία στο Green μόλις επιβεβαιωθεί ότι λειτουργεί, επιτρέποντας άμεσο rollback.
-- **Canary Deployment:** Η νέα έκδοση διοχετεύεται σταδιακά σε μικρό ποσοστό χρηστών (π.χ. 5%) πριν επεκταθεί σε όλους, μειώνοντας το ρίσκο.
+| Στρατηγική | Τυπικό RTO | Τυπικό RPO | Σχετικό Κόστος | Περιγραφή |
+|---|---|---|---|---|
+| **Backup & Restore** | Ώρες | Ώρες | 💲 | Περιοδικά backups σε δεύτερη region· ανάκτηση κατ' απαίτηση |
+| **Pilot Light** | Λεπτά–Ώρες | Λεπτά | 💲💲 | Ελάχιστη "σβηστή" υποδομή έτοιμη να κλιμακωθεί |
+| **Warm Standby** | Λεπτά | Δευτερόλεπτα | 💲💲💲 | Μειωμένης κλίμακας, πλήρως λειτουργικό αντίγραφο, πάντα ενεργό |
+| **Multi-Site Active-Active** | Σχεδόν μηδενικό | Σχεδόν μηδενικό | 💲💲💲💲 | Ταυτόχρονη λειτουργία σε πολλαπλές regions με real-time replication |
 
-**Παράδειγμα απλού Terraform block (IaC στην πράξη):**
+> Η επιλογή στρατηγικής είναι πάντα **trade-off κόστους έναντι ανοχής σε διακοπή**. Δεν υπάρχει "σωστή" απάντηση χωρίς σαφές SLA και κατηγοριοποίηση της κρισιμότητας του συστήματος (π.χ. tier-1 vs tier-3 εφαρμογή).
+
+---
+
+## 🔐 4. Zero Trust Security Architecture
+
+> *"Never trust, always verify."* Καμία οντότητα — χρήστης, συσκευή ή υπηρεσία — δεν θεωρείται έμπιστη εξ ορισμού, ανεξάρτητα από τη θέση της στο δίκτυο.
+
+```mermaid
+flowchart LR
+    Identity["Identity Provider<br/>(SSO / MFA)"] --> PDP["Policy Decision Point"]
+    Device["Device Posture Check"] --> PDP
+    PDP -- "Allow / Deny<br/>ανά αίτημα" --> Resource["Προστατευμένος Πόρος"]
+    PDP -.->|"Συνεχής<br/>επαναξιολόγηση"| PDP
+```
+
+### Πυλώνες υλοποίησης
+
+- **Least Privilege Access:** δικαιώματα μόνο τα απολύτως απαραίτητα, χρονικά περιορισμένα όπου γίνεται (just-in-time access, όχι μόνιμα admin rights).
+- **Micro-Segmentation:** το δίκτυο χωρίζεται σε μικρές, απομονωμένες ζώνες — μια παραβίαση σε ένα σημείο δεν επιτρέπει ελεύθερη κίνηση (lateral movement) στο υπόλοιπο σύστημα.
+- **Continuous Verification:** η ταυτότητα και τα δικαιώματα ελέγχονται σε **κάθε** αίτημα, όχι μόνο κατά το αρχικό login.
+- **Identity as the Perimeter:** η ταυτότητα (όχι η φυσική/δικτυακή θέση) γίνεται το κεντρικό σημείο ελέγχου ασφαλείας.
+
+---
+
+## 💰 5. Cost Optimization & FinOps
+
+Το **FinOps** είναι η πρακτική συνεργασίας engineering, finance και διοίκησης, ώστε το κόστος cloud να είναι προβλέψιμο και δικαιολογημένο.
+
+| Πρακτική | Πώς λειτουργεί | Τυπικό αποτέλεσμα |
+|---|---|---|
+| **Right-Sizing** | Επιλογή instance type βάσει πραγματικής χρήσης CPU/RAM | Αποφυγή over-provisioning |
+| **Reserved Instances / Savings Plans** | Δέσμευση χρήσης 1-3 ετών | Έκπτωση έως ~70% έναντι on-demand |
+| **Spot Instances** | Αξιοποίηση αχρησιμοποίητης χωρητικότητας | Μεγάλη έκπτωση, με ρίσκο διακοπής — ιδανικό για fault-tolerant/batch workloads |
+| **Storage Lifecycle Policies** | Αυτόματη μετάβαση παλιών δεδομένων σε φθηνότερη κλάση | π.χ. S3 Standard → S3 Glacier |
+| **Tagging Strategy** | Ετικέτες `team`/`environment`/`project` σε κάθε πόρο | Ακριβής κατανομή κόστους (cost allocation) ανά ομάδα |
+
+---
+
+## 🔁 6. CI/CD & Deployment Strategies
+
+```mermaid
+flowchart LR
+    Dev["Developer"] -->|git push| Repo["Git Repository"]
+    Repo --> CI["CI Pipeline<br/>Build & Test"]
+    CI --> Registry["Container Registry"]
+    Registry --> CD["CD Pipeline"]
+    CD --> Staging["Staging Environment"]
+    Staging -->|Approval| Prod["Production"]
+```
+
+| Στρατηγική | Πώς λειτουργεί | Ρίσκο / Όφελος |
+|---|---|---|
+| **Blue-Green** | Δύο πανομοιότυπα περιβάλλοντα· η κίνηση μεταφέρεται ακαριαία στο νέο | Χαμηλό ρίσκο — άμεσο rollback αν χρειαστεί |
+| **Canary** | Σταδιακή διοχέτευση κίνησης (π.χ. 5% → 50% → 100%) | Έγκαιρη ανίχνευση προβλημάτων πριν επηρεαστούν όλοι οι χρήστες |
+| **Rolling Update** | Σταδιακή αντικατάσταση instances ένα-ένα | Μεσαίο ρίσκο — προσωρινά συνυπάρχουν δύο εκδόσεις |
+
+**Παράδειγμα Infrastructure as Code (Terraform):**
 
 ```hcl
 resource "aws_instance" "web_server" {
   ami           = "ami-0abcdef1234567890"
   instance_type = "t3.micro"
+  subnet_id     = aws_subnet.private_app.id
 
   tags = {
     Name        = "web-server"
@@ -109,22 +182,34 @@ resource "aws_instance" "web_server" {
 
 ---
 
-## 🏛️ 18. Well-Architected Framework & Governance
+## 🏛️ 7. Well-Architected Framework Checklist
 
-[#️-18-well-architected-framework--governance](#️-18-well-architected-framework--governance)
+Ένα σύνολο βέλτιστων πρακτικών (AWS, Azure και GCP έχουν αντίστοιχα frameworks), οργανωμένο σε πυλώνες — χρήσιμο ως λίστα ελέγχου πριν από κάθε production launch.
 
-Το **AWS Well-Architected Framework** (και τα αντίστοιχα του Azure/GCP) αποτελεί ένα σύνολο βέλτιστων πρακτικών οργανωμένο σε πυλώνες, χρήσιμο ανεξαρτήτως παρόχου:
-
-| Πυλώνας                        | Στόχος                                                                 |
-| ------------------------------- | ------------------------------------------------------------------------ |
-| **Operational Excellence**      | Λειτουργία και παρακολούθηση συστημάτων για παραγωγή αξίας.             |
-| **Security**                    | Προστασία δεδομένων, συστημάτων και περιουσιακών στοιχείων.             |
-| **Reliability**                 | Ανάκαμψη από αστοχίες και ικανοποίηση ζήτησης.                          |
-| **Performance Efficiency**      | Αποδοτική χρήση πόρων ανάλογα με τις απαιτήσεις.                        |
-| **Cost Optimization**           | Αποφυγή περιττού κόστους (βλ. ενότητα 14 - FinOps).                     |
-| **Sustainability**              | Ελαχιστοποίηση περιβαλλοντικού αποτυπώματος των workloads.               |
-
-- **Governance:** Πολιτικές που διασφαλίζουν ότι οι πόροι δημιουργούνται σύμφωνα με τους κανόνες του οργανισμού (π.χ. AWS Organizations, Azure Policy, Service Control Policies - SCPs).
-- **Compliance:** Συμμόρφωση με κανονιστικά πλαίσια όπως GDPR, ISO 27001, SOC 2 — κρίσιμο ειδικά σε κλάδους όπως τράπεζες και υγεία.
+| Πυλώνας | Βασική Ερώτηση |
+|---|---|
+| **Operational Excellence** | Μπορώ να παρακολουθώ και να λειτουργώ το σύστημα με αξιοπιστία; |
+| **Security** | Ποιος έχει πρόσβαση σε τι, και είναι κρυπτογραφημένα τα δεδομένα in transit & at rest; |
+| **Reliability** | Τι συμβαίνει αν χαθεί μια Availability Zone; Μια ολόκληρη Region; |
+| **Performance Efficiency** | Χρησιμοποιώ τους κατάλληλους πόρους για το συγκεκριμένο workload; |
+| **Cost Optimization** | Πληρώνω για χωρητικότητα που δεν χρησιμοποιείται; |
+| **Sustainability** | Ελαχιστοποιώ το περιβαλλοντικό αποτύπωμα της υποδομής μου; |
 
 ---
+
+## 📖 8. Γλωσσάρι Όρων
+
+| Όρος | Ορισμός |
+|---|---|
+| **RTO** | Recovery Time Objective — μέγιστος αποδεκτός χρόνος διακοπής λειτουργίας |
+| **RPO** | Recovery Point Objective — μέγιστη αποδεκτή απώλεια δεδομένων σε χρόνο |
+| **SLA** | Service Level Agreement — συμβατική δέσμευση διαθεσιμότητας/απόδοσης |
+| **CIDR** | Classless Inter-Domain Routing — τρόπος ορισμού εύρους IP διευθύνσεων |
+| **IAM** | Identity and Access Management |
+| **AZ** | Availability Zone — ανεξάρτητο data center μέσα σε μια Region |
+| **IaC** | Infrastructure as Code |
+| **GitOps** | Διαχείριση υποδομής/deployments με το Git ως single source of truth |
+
+---
+
+*Αυτό το αρχείο συνεχίζει τη δομή του [`cloud-fundamentals.md`](./cloud-fundamentals.md) και προτείνεται να τοποθετηθεί στον ίδιο φάκελο `Cloud Computing Architecture, Networking, Security and Modern Infrastructure/`.*
