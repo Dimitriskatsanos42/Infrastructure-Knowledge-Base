@@ -6,7 +6,7 @@
 
 ## 📋 Περιεχόμενα
 
-### 🔑 [`Βασικά AD/`](./Βασικά%20AD) — Βασικά AD
+### 🔑 [Βασικά AD](./Βασικά%20AD)
 
 | Αρχείο | Θέμα |
 |---|---|
@@ -14,7 +14,7 @@
 | [`active-directory-advanced.md`](./Βασικά%20AD/active-directory-advanced.md) | FSMO Roles, Replication, Trusts, DNS Integration, Security Tiering |
 | [`group-policy-deep-dive.md`](./Βασικά%20AD/group-policy-deep-dive.md) | GPO processing order (LSDOU), Fine-Grained Password Policies, Security/WMI Filtering, Loopback Processing, real-world runbooks |
 
-### 🔐 [`Identity Security & Attacks/`](./Identity%20Security%20%26%20Attacks) — Identity Security & Attacks
+### 🔐 [Identity Security & Attacks](./Identity%20Security%20%26%20Attacks)
 
 | Αρχείο | Θέμα |
 |---|---|
@@ -24,7 +24,7 @@
 | [`gmsa-service-accounts.md`](./Identity%20Security%20%26%20Attacks/gmsa-service-accounts.md) | Group Managed Service Accounts, migration από legacy static-password accounts |
 | [`ad-auditing-siem.md`](./Identity%20Security%20%26%20Attacks/ad-auditing-siem.md) | Advanced Audit Policy, SACL auditing, log forwarding, SIEM integration, detection rules |
 
-### 🗄️ [`Infrastructure Services/`](./Infrastructure%20Services) — Infrastructure Services
+### 🗄️ [Infrastructure Services](./Infrastructure%20Services)
 
 | Αρχείο | Θέμα |
 |---|---|
@@ -33,7 +33,7 @@
 | [`dns-dhcp-administration.md`](./Infrastructure%20Services/dns-dhcp-administration.md) | DNS records/zones, DHCP scopes/reservations, failover, troubleshooting |
 | [`print-server-management.md`](./Infrastructure%20Services/print-server-management.md) | Print server setup, driver management, permissions, queue troubleshooting |
 
-### 🛡️ [`Operations & Disaster Recovery/`](./Operations%20%26%20Disaster%20Recovery) — Operations & Disaster Recovery
+### 🛡️ [Operations & Disaster Recovery](./Operations%20%26%20Disaster%20Recovery)
 
 | Αρχείο | Θέμα |
 |---|---|
