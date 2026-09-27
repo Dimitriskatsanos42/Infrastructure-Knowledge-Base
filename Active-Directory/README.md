@@ -10,9 +10,9 @@
 
 | Αρχείο | Θέμα |
 |---|---|
-| [`active-directory.md`](.) | Users, Groups, OUs, GPO βασικά, Entra ID, PowerShell 101 |
-| [`active-directory-advanced.md`](.) | FSMO Roles, Replication, Trusts, DNS Integration, Security Tiering |
-| [`group-policy-deep-dive.md`](.) | GPO processing order (LSDOU), Fine-Grained Password Policies, Security/WMI Filtering, Loopback Processing, real-world runbooks |
+| [`active-directory.md`](./active-directory.md) | Users, Groups, OUs, GPO βασικά, Entra ID, PowerShell 101 |
+| [`active-directory-advanced.md`](./Βactive-directory-advanced.md) | FSMO Roles, Replication, Trusts, DNS Integration, Security Tiering |
+| [`group-policy-deep-dive.md`](./group-policy-deep-dive.md) | GPO processing order (LSDOU), Fine-Grained Password Policies, Security/WMI Filtering, Loopback Processing, real-world runbooks |
 
 ### 🔐 [Identity Security & Attacks](./Identity%20Security%20%26%20Attacks)
 
