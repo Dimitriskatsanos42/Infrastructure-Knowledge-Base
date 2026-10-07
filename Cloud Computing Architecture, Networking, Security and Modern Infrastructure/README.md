@@ -211,6 +211,4 @@ flowchart TB
 
 **Living documentation** · Το περιεχόμενο εξελίσσεται μαζί με τη μαθησιακή διαδρομή και την τεχνολογία.
 
-Maintained by [@Dimitriskatsanos42](https://github.com/Dimitriskatsanos42)
-
 </div>
